@@ -19,7 +19,8 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    # @ingredients = @cocktail.ingredients
+    @ingredients = @cocktail.ingredients
+    @doses = @cocktail.doses
   end
 
   def edit
@@ -29,7 +30,10 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
+    @cocktail.destroy
+    redirect_to cocktails_path, notice: 'Restaurant was successfully destroyed.'
   end
+
 
   private
 
