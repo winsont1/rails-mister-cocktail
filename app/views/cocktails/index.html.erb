@@ -21,5 +21,7 @@
       <div id="delete"> <%= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></div>
     </div>
     <% end %>
+    <%= cl_image_tag("mjvosoqjvr61e3axbb9i",
+      width: 400, height: 300, crop: :fill) %>
   </div>
 </div>
